@@ -1,14 +1,17 @@
 package ie.atu.week2;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.Min;
+import lombok.*;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class Product {
-    private String id;
+    @NonNull
+    private int id;
+    @NonNull
     private String name;
+    @Min(value = 0, message = "Price can't be negative")
     private float price;
 }
