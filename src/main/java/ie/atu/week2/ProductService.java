@@ -24,7 +24,6 @@ public class ProductService {
     }
 
     public Product updateProduct(Product product) {
-
         for (Product pro : products) {
             if (pro.getId() == product.getId()) {
                 pro.setName(product.getName());
